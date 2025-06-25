@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Prediksi SVM</title>
+</head>
+
+<body>
+    <h2>Formulir Prediksi</h2>
+    <form method="POST" action="/predict">
+        <!-- Ganti input sesuai jumlah dan nama fitur -->
+        <label>Fitur 1:</label><input type="text" name="f1"><br>
+        <label>Fitur 2:</label><input type="text" name="f2"><br>
+        <label>Fitur 3:</label><input type="text" name="f3"><br>
+        <label>Fitur 4:</label><input type="text" name="f4"><br>
+        <!-- Tambahkan input lain sesuai jumlah fitur -->
+        <input type="submit" value="Prediksi">
+    </form>
+    {% if prediction_text %}
+    <h3>{{ prediction_text }}</h3>
+    {% endif %}
+</body>
+
+</html>
